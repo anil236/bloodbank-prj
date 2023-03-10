@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+ <head>
+    <title>Donate list</title>
+    <link rel="stylesheet" href="{% static 'css/donatelist.css' %}">
+   
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <meta charset="UTF-8">
+</head>
+
+<div class="container">
+
+<h1> Donated List </h1>
+    <div class="length"> Total : {{messeges|length}} Donation's </div> 
+<table class="table">
+    <thead class ="thead">
+        <tr>
+            <th>ID</th>
+            <th>Fname</th>
+            <th>Lname</th>
+            <th>DOB</th>
+            <th>email</th>
+            <th>ph_number</th>
+            <th>address</th>
+            <th>blood group</th>
+        </tr>
+    </thead>
+    <tbody>
+               {% for msg in messeges %}
+                      <tr>
+                          <td> {{msg.id}}</td>
+                          <td> {{msg.first_name}}</td>
+                          <td> {{msg.last_name}}</td>
+                          <td> {{msg.birthyear}}</td>
+                          <td> {{msg.email}}</td>
+                          <td> {{msg.ph_no}}</td>
+                          <td> {{msg.address}}</td>
+                          <td> {{msg.bloodgroup}}</td>
+                      </tr>
+               {% endfor %}
+    </tbody>
+</table>
+
+</div>

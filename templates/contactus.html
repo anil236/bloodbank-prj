@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Css\contactus.css' %}" type="text/css">
+    <title>Our team</title>
+</head>
+<body>
+    <div class="nav">
+    
+        <img src="https://www.bloodbank.binaryweb.com.ng/cpics/welcome.png" height="100px" width="250px" alt="logo"> </img>
+        
+    
+<ul> 
+   <li><a href="{% url 'home' %}">Home</a></li> 
+   
+    <li><a href="">About us</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+</ul>
+
+</div>
+    <div class="container">
+         <h1 class="title">Our Developers</h1><br> <br>
+
+         <div class="bunnybox">
+        
+        <img id="img" src="{% static 'images\bunny.jpg' %}" alt="bunny" height="130" >
+        <div class="bunny">
+            <h4> Name : Pallati Karthik (39)</h4>
+           <br>
+          <h4> Roll : 20248-CM-039 </h4>
+          <br>
+          <h4> Department : computer science </h4>
+           <br>
+          <h4>Instution : Teegala krishna reddy eng colge</h4><br>
+
+        </div>
+        <br>
+
+    </div>
+    
+        <br>
+        <br>
+
+        <div class="manibox">
+        <img id="img" src="{% static 'images\manikanta.jpg' %}" alt="manikanta" height="130px" >
+        <div class="mani">
+            <h4> Name : V.Manikanta </h4>
+           <br>
+          <h4> Roll : 20248-cm-025  </h4>
+          <br>
+          <h4>Department : computer science</h4>
+           <br>
+          <h4>  Instution : Teegala krishna reddy eng colge</h4><br>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="swathibox">
+        {% load static %}
+        <img id="img" src="{% static 'images\swathi.jpg' %}" alt="swathi" height="130px" >
+         
+       <div class="swathi">
+           <h4> Name : swathi </h4>
+          <br>
+         <h4> Roll : 20240-CM-052 </h4>
+         <br>
+         <h4> Department : computer science   </h4>
+          <br>
+         <h4> Instution : Teegala krishna reddy eng colge </h4><br>
+
+       </div>
+       <br>
+
+   </div>
+   <br>
+   <br>
+   <div class="swathibox">
+    <img id="img" src="{% static 'images\image_5.jpg' %}" alt="Dheera..." height="130px" >
+     
+   <div class="swathi">
+       <h4> Name : Dheera samurchitha </h4>
+      <br>
+     <h4> Roll :  20248-CM-059 </h4>
+     <br>
+     <h4> Department : computer science   </h4>
+      <br>
+     <h4> Instution : Teegala krishna reddy eng colge </h4><br>
+
+   </div>
+   <br>
+
+</div>
+
+    </div>
+    <footer >
+        <h2 id="devl"> Developer by team39 </h2>
+        <br>
+    <div class="links">
+            <a href="index.html"><h4>Blood bank.org </h4> </a>
+        <br>
+           
+            <a href="https://www.instagram.com/bunny.pallati/"  target="_blank"><h4> INSTAGRAM </h4>  </a>
+
+    </div> 
+ </footer> 
+    
+</body>
+</html>

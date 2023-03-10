@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{% load static %}
+ <head>
+    <title>Bloodbank.in.org</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+   
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <meta charset="UTF-8">
+</head>
+
+ <body>
+   <div class="nav">
+    
+            <img src="https://www.bloodbank.binaryweb.com.ng/cpics/welcome.png" height="100px" width="250px" alt=""> </img>
+            
+        
+    <ul>
+       <li><a href="{% url 'home' %}">Home</a></li> 
+        
+
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+            <li><a href="accounts/logout">logout</a></li>
+        {% else %}
+            <li><a href="accounts/register">Register </a></li> 
+            <li><a href="accounts/login">Login </a></li> 
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        {% endif %}
+            
+
+            
+    </ul>
+   
+</div>
+      
+
+        {% if user.is_authenticated %}      
+            <h1>{{user.first_name }} {{user.last_name}} , <br>Donate blood and <br>be the reason  <br>for someone's existence</h1>
+
+        {% else %}
+             <h1> <br>Donate blood and <br>be the reason  <br>for someone's existence</h1>
+        {% endif %}
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'donate' %}" class="btn"><h3>donate now </h3></a>
+        <a href="{% url 'requestlist' %}" class="btn"><h3>request  </h3></a>
+        
+        {% endif %}
+ </body>
+     <footer>
+            <h2>Developer by 39:25:52:59 </h2>
+            <br>
+        <div class="links">
+                <h4>Blood bank.org </h4>
+            <br>
+               
+                <a href="https://www.instagram.com/bunny.pallati/"  target="_blank"><h4> INSTAGRAM </h4>  </a>
+
+            
+        </div> 
+     </footer>
